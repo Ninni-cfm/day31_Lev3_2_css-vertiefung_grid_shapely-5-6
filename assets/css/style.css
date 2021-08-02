@@ -1,0 +1,248 @@
+/*****************************************************************************
+    Instructions for Shapely Demo Level 2-6
+	* Assets to use for navigation:
+        o Font-family:"Raleway"
+        o Header height:76px
+        o Color of Logo button:: #666
+        o Color of Logo button:hover: #333
+        o Color of menu button: #333 
+        o Color of menu button:hover: #337ab7
+------------------------------------------------------------------------------
+    Additional instructions for Shapely Demo Level 3-6
+    * Color of button “Read more”: #745cf9
+    * Color of button:hover “Read more”: #5234f9
+    * Link of the picture: https://demo.colorlib.com/wp-content/uploads/sites/59/2016/03/photo-1443527216320-7e744084f5a7-1.jpg
+------------------------------------------------------------------------------
+    Additional instructions for Shapely Demo Level 4-6
+    * Color of <p>: #8c979e
+    * Color of <h2>: #0e1015  
+    * Links for the images:
+        o https://demo.colorlib.com/wp-content/uploads/sites/59/2016/03/macbook-preview-flexible.png
+        o https://demo.colorlib.com/wp-content/uploads/sites/59/2016/03/flexible-portfolio.png
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/*****************************************************************************
+    some defaut settings like scroll behavior etc...
+*/
+html {
+    scroll-behavior: smooth;
+}
+/*----------------------------------------------------------------------------
+    Remove margins and paddings for all elements 
+*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*****************************************************************************
+    Defaults for the whole body
+*/
+body {
+    /* font-family: "Raleway", sans-serif; */
+    font-family: "Raleway";
+}
+
+section {
+    height: 100vh;
+}
+
+/*****************************************************************************
+    Header and navigation setup, positioning and sizes
+*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: space-between;
+
+    background: white;
+}
+nav {
+    height: 76px;
+    padding: 0 5%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 600;
+
+    z-index: 100;
+}
+/*----------------------------------------------------------------------------
+    Navigation: link with logo
+*/
+.logo {
+    text-decoration: none;
+    color: #666;
+    font-size: 1.5em;
+}
+.logo:visited {
+    color: #666;
+}
+.logo:hover {
+    color: #333;
+}
+/*----------------------------------------------------------------------------
+    Navigation: unordered list with links
+*/
+nav ul {
+    width: 70%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+nav li a {
+    padding: 0%;
+    text-decoration: none;
+    color: #333;
+}
+nav li a:visited {
+    color: #333;
+}
+nav li a:hover {
+    color: #337ab7;
+}
+
+/*****************************************************************************
+    Section 1 (includes the navigation bar) 
+*/
+#section-1 {
+    height: 100vh;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    background: url("https://demo.colorlib.com/wp-content/uploads/sites/59/2016/03/photo-1443527216320-7e744084f5a7-1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* ---------------------------------------------------------------------------
+    this is the main content of section 1
+*/
+#content-sec1 {
+    position: relative;
+    top: 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* ---------------------------------------------------------------------------
+    header line (1st child of content-sec1)
+*/
+#content-sec1 h1 {
+    padding-top: 5%;
+    font-size: 5em;
+}
+/* ---------------------------------------------------------------------------
+    paragraph (2nd child of content-sec1)
+*/
+#content-sec1 p {
+    padding-top: 4%;
+    font-size: 1.15em;
+}
+/* ---------------------------------------------------------------------------
+    div with links (3rd child of content-sec1)
+*/
+#content-sec1 div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5%;
+}
+/* ---------------------------------------------------------------------------
+    default styling of the links 
+*/
+#content-sec1 a {
+    min-width: 200px;
+    flex-basis: 400px;
+    padding: 5%;
+    margin: 1%;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+
+#content-sec1 a:first-child {
+    border: 2px solid white;
+}
+#content-sec1 a:first-child:hover {
+    background: #ffffff30;
+}
+#content-sec1 a:last-child {
+    background: #745cf9;
+}
+#content-sec1 a:last-child:hover {
+    background: #5234f9;
+}
+
+/*****************************************************************************
+    Section 2, 3: SEO Friendly, Portfolio
+*/
+
+.portfolio {
+    display: flex;
+    align-items: center;
+}
+
+.portfolio > div:first-of-type {
+    height: 50%;
+    width: 25%;
+    padding-left: 15%;
+
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr 5fr;
+}
+.portfolio > div:last-of-type {
+    width: 55%;
+}
+.portfolio h2 {
+    color: #0e1015;
+}
+.portfolio p {
+    color: #8c979e;
+    line-height: 1.5;
+}
+.portfolio a {
+    width: 30%;
+    padding: 2vmin 5vmin;
+    margin: 1%;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background: #745cf9;
+}
+.portfolio a:hover {
+    background: #5234f9;
+}
+
+.portfolio img {
+    width: 100%;
+}
+
+/*--------------------------------------------------------------------------*/
+.portfolio:nth-of-type(odd) {
+    background: #f4f4f4f4;
+}
+.portfolio:nth-of-type(odd) > div:first-child {
+    padding-left: 0;
+    order: 1;
+}
+.portfolio:nth-of-type(odd) > div:last-child {
+    padding-left: 15%;
+}
